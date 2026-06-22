@@ -63,8 +63,15 @@
     margin: 0 auto 20px;
     background: rgba(211,47,47,0.10);
     box-shadow: 0 0 28px var(--red-glow);
+    overflow: hidden;
   }
-  .logo-ring svg { width: 36px; height: 36px; }
+  .logo-ring img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+  }
   .hero h1 {
     font-family: 'Playfair Display', serif;
     font-size: clamp(28px, 5vw, 44px);
@@ -126,18 +133,31 @@
     pointer-events: none;
   }
   .bundle-banner {
-    background: linear-gradient(135deg, #0A1545, #1A0A20);
-    border-bottom: 1px solid var(--border);
-    min-height: 200px;
-    display: flex; align-items: center; justify-content: center;
     position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
     overflow: hidden;
+    background: linear-gradient(135deg, #0A1545, #1A0A20);
+  }
+  .bundle-banner-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
   .bundle-banner-inner {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     padding: 32px 24px;
-    position: relative;
     z-index: 1;
+    background: rgba(5,8,26,0.35);
   }
   .bundle-banner-inner .eyebrow {
     font-size: 9px;
@@ -361,7 +381,6 @@
     <img
       src="Logo.png"
       alt="Seni Hubungan"
-      class="profile-image"
     >
   </div>
 
