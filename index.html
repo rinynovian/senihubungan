@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seni Hubungan — Panduan & Edukasi Intim Pasangan</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --red:       #D32F2F;
+    --red-dark:  #8B0000;
+    --red-light: #FF5252;
+    --red-glow:  rgba(211,47,47,0.18);
+    --blue:      #1565C0;
+    --blue-dark: #0D2B6B;
+    --blue-mid:  #1976D2;
+    --blue-light:#42A5F5;
+    --blue-glow: rgba(21,101,192,0.18);
+    --bg:        #05081A;
+    --bg2:       #080C24;
+    --bg3:       #0B1030;
+    --surface:   #0F1535;
+    --surface2:  #131A3A;
+    --gold:      #F5C518;
+    --white:     #FFFFFF;
+    --text-muted:#8899BB;
+    --border:    rgba(255,255,255,0.07);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--white);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* HERO HEADER */
+  .hero {
+    background: linear-gradient(180deg, #0D1230 0%, var(--bg) 100%);
+    text-align: center;
+    padding: 56px 20px 48px;
+    position: relative;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(21,101,192,0.12) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 40% at 50% 100%, rgba(211,47,47,0.10) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .logo-ring {
+    width: 72px; height: 72px;
+    border-radius: 50%;
+    border: 2.5px solid var(--red);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 20px;
+    background: rgba(211,47,47,0.10);
+    box-shadow: 0 0 28px var(--red-glow);
+  }
+  .logo-ring svg { width: 36px; height: 36px; }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+  }
+  .hero .handle {
+    color: var(--red-light);
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 14px;
+    letter-spacing: 0.3px;
+  }
+  .hero .tagline {
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  /* CONTAINER */
+  .container { max-width: 520px; margin: 0 auto; padding: 0 16px; }
+
+  /* SECTION LABEL */
+  .section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--blue-light);
+    margin: 40px 0 16px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--blue-light) 0%, transparent 100%);
+    opacity: 0.3;
+  }
+
+  /* BUNDLE CARD */
+  .bundle-card {
+    background: linear-gradient(135deg, var(--blue-dark) 0%, #0A0F28 50%, var(--red-dark) 100%);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+  }
+  .bundle-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 50% at 20% 20%, rgba(21,101,192,0.25) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 40% at 80% 80%, rgba(211,47,47,0.20) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .bundle-banner {
+    background: linear-gradient(135deg, #0A1545, #1A0A20);
+    border-bottom: 1px solid var(--border);
+    min-height: 200px;
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .bundle-banner-inner {
+    text-align: center;
+    padding: 32px 24px;
+    position: relative;
+    z-index: 1;
+  }
+  .bundle-banner-inner .eyebrow {
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .bundle-title-big {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(26px, 6vw, 40px);
+    font-weight: 800;
+    line-height: 1.1;
+    background: linear-gradient(135deg, #FFFFFF 0%, var(--gold) 60%, #FFB74D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 4px;
+  }
+  .bundle-title-big span {
+    font-size: 0.65em;
+    display: block;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+  }
+  .bundle-sub {
+    font-size: 12px;
+    color: rgba(255,255,255,0.55);
+    margin-top: 8px;
+  }
+  .badge-row { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin-top: 12px; }
+  .badge {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    border: 1px solid;
+  }
+  .badge-blue  { background: rgba(21,101,192,0.25); border-color: var(--blue-mid); color: var(--blue-light); }
+  .badge-red   { background: rgba(211,47,47,0.25); border-color: var(--red); color: #FF8A80; }
+  .badge-gold  { background: rgba(245,197,24,0.15); border-color: var(--gold); color: var(--gold); }
+
+  .bundle-info { padding: 24px 24px 28px; position: relative; z-index: 1; }
+  .bundle-new-badge {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    background: var(--red);
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  .bundle-info h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+  .bundle-info .desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 14px; }
+  .bundle-tag {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(21,101,192,0.20);
+    border: 1px solid rgba(66,165,245,0.3);
+    color: var(--blue-light);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  .bundle-tag .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--blue-light); }
+  .price-row { display: flex; align-items: baseline; gap: 10px; margin-bottom: 16px; }
+  .price-old { font-size: 14px; color: var(--text-muted); text-decoration: line-through; }
+  .price-new { font-size: 28px; font-weight: 800; color: var(--red-light); }
+  .btn-buy {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: filter 0.2s, transform 0.15s;
+    box-shadow: 0 4px 20px rgba(211,47,47,0.4);
+  }
+  .btn-buy:hover { filter: brightness(1.12); transform: translateY(-1px); }
+  .btn-buy:active { transform: translateY(0); filter: brightness(0.97); }
+
+  /* PRODUCT GRID */
+  .product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 8px;
+  }
+
+  .product-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.2s, border-color 0.2s;
+    display: flex;
+    flex-direction: column;
+  }
+  .product-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(66,165,245,0.35);
+  }
+  .product-img-wrap {
+    position: relative;
+    width: 100%;
+    padding-top: 66%;
+    background: var(--surface2);
+    overflow: hidden;
+  }
+  .product-img-wrap img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .product-img-wrap .ebook-tag {
+    position: absolute;
+    top: 8px; right: 8px;
+    background: var(--blue);
+    color: #fff;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+  .product-body { padding: 12px 12px 14px; flex: 1; display: flex; flex-direction: column; }
+  .product-body h3 { font-size: 13px; font-weight: 700; color: var(--white); line-height: 1.35; margin-bottom: 5px; }
+  .product-body .pdesc { font-size: 11px; color: var(--text-muted); line-height: 1.5; margin-bottom: 10px; flex: 1; }
+  .product-body .pprice { font-size: 16px; font-weight: 800; color: var(--red-light); margin-bottom: 10px; }
+  .btn-buy-sm {
+    display: block;
+    width: 100%;
+    padding: 9px 10px;
+    background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: filter 0.2s, transform 0.15s;
+    box-shadow: 0 3px 12px rgba(21,101,192,0.35);
+  }
+  .btn-buy-sm:hover { filter: brightness(1.15); transform: translateY(-1px); }
+  .btn-buy-sm:active { transform: translateY(0); }
+
+  /* DIVIDER */
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border) 30%, var(--border) 70%, transparent);
+    margin: 32px 0;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 32px 20px;
+    margin-top: 56px;
+  }
+  footer .footer-links { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin-bottom: 16px; }
+  footer .footer-links a { font-size: 12px; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+  footer .footer-links a:hover { color: var(--blue-light); }
+  footer .copy { font-size: 12px; color: rgba(136,153,187,0.5); margin-bottom: 10px; }
+  footer .powered {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.2);
+  }
+  footer .powered span { color: rgba(66,165,245,0.5); font-weight: 700; }
+
+  /* Placeholder image style */
+  .img-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,0.3);
+  }
+  .img-placeholder svg { width: 28px; height: 28px; opacity: 0.25; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+
+  <div class="logo-ring">
+    <img
+      src="Logo.png"
+      alt="Seni Hubungan"
+      class="profile-image"
+    >
+  </div>
+
+  <h1>Seni Hubungan</h1>
+  <p class="handle">@senihubungan</p>
+  <p class="tagline">
+    Dari Amatir Menjadi Magnet Perhatian Wanita - Ilmu Rahasia 7 Detik Merangsang Wanita
+  </p>
+
+</header>
+
+<div class="container">
+
+  <!-- BUNDLE -->
+<p class="section-label">Bundle</p>
+
+<div class="bundle-card">
+  <div class="bundle-banner">
+    <img
+      src="bundle.png"
+      alt="Banner promosi bundle"
+      class="bundle-banner-img"
+      loading="lazy"
+    />
+    <div class="bundle-banner-inner">
+      <p class="eyebrow">✦ Penawaran Terbatas ✦</p>
+      <div class="bundle-title-big">
+        <span>Bundle</span>
+        Masterclass
+        <span style="font-size:0.55em; letter-spacing:6px;">Eksklusif</span>
+      </div>
+      <p class="bundle-sub">Dari Amatir Menjadi Magnet Perhatian Wanita - Ilmu Rahasia 7 Detik Merangsang Wanita</p>
+      <div class="badge-row">
+        <span class="badge badge-blue">Ilmu Rahasia</span>
+        <span class="badge badge-red">Panduan Lengkap</span>
+        <span class="badge badge-gold">Bonus Eksklusif</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="bundle-info">
+    <span class="bundle-new-badge">● Terbaik</span>
+    <h2>Bundle Masterclass Eksklusif</h2>
+    <p class="desc">Ilmu Rahasia 7 Detik Merangsang Wanita</p>
+    <div class="bundle-tag">
+      <span class="dot"></span>
+      7 Produk &nbsp;·&nbsp; Hemat Rp 643.000
+    </div>
+    <div class="price-row">
+      <span class="price-old">Rp 941.000</span>
+      <span class="price-new">Rp 298.000</span>
+    </div>
+    <a href="#" class="btn-buy">⚡ Beli Sekarang — Hemat 68%</a>
+  </div>
+</div>
+
+  <!-- PRODUCTS -->
+  <p class="section-label" style="margin-top:44px;">Produk</p>
+
+  <div class="product-grid">
+
+    <!-- 1 -->
+    <div class="product-card">
+      <div class="product-img-wrap">
+        <img src="cover1.png" alt="Formula 7 Detik Yang Membuat Wanita Lebih Tertarik" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder" style="display:none; background:linear-gradient(135deg,#0A1545,#1A0520);">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v13H4V4zm0 14h16v2H4v-2z"/></svg>
+          Cover 1
+        </div>
+        <span class="ebook-tag">Ebook</span>
+      </div>
+      <div class="product-body">
+        <h3>Formula 7 Detik</h3>
+        <p class="pdesc">Yang Membuat Wanita Lebih Tertarik</p>
+        <p class="pprice">Rp 189.000</p>
+        <a href="#" class="btn-buy-sm">Beli Sekarang</a>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="product-card">
+      <div class="product-img-wrap">
+        <img src="cover2.png" alt="Fakta Klitoris Yang Jarang Diketahui Pria" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder" style="display:none; background:linear-gradient(135deg,#0A0520,#1A0B10);">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v13H4V4zm0 14h16v2H4v-2z"/></svg>
+          Cover 2
+        </div>
+        <span class="ebook-tag">Ebook</span>
+      </div>
+      <div class="product-body">
+        <h3>Fakta Klitoris Yang Jarang Diketahui Pria</h3>
+        <p class="pdesc">Pelajari teknik ultimatum</p>
+        <p class="pprice">Rp 89.000</p>
+        <a href="#" class="btn-buy-sm">Beli Sekarang</a>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="product-card">
+      <div class="product-img-wrap">
+        <img src="cover3.jpeg" alt="Kitab Rahasia Squirting" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder" style="display:none; background:linear-gradient(135deg,#1A0010,#080C28);">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v13H4V4zm0 14h16v2H4v-2z"/></svg>
+          Cover 3
+        </div>
+        <span class="ebook-tag">Ebook</span>
+      </div>
+      <div class="product-body">
+        <h3>Kitab Rahasia Squirting</h3>
+        <p class="pdesc">Teknik Eksklusif Memahami Respon Intim Wanita</p>
+        <p class="pprice">Rp 89.000</p>
+        <a href="#" class="btn-buy-sm">Beli Sekarang</a>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="product-card">
+      <div class="product-img-wrap">
+        <img src="cover4.jpeg" alt="Kitab Kepuasan Wanita" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder" style="display:none; background:linear-gradient(135deg,#1A0010,#080C28);">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v13H4V4zm0 14h16v2H4v-2z"/></svg>
+          Cover 4
+        </div>
+        <span class="ebook-tag">Ebook</span>
+      </div>
+      <div class="product-body">
+        <h3>Kitab Kepuasan Wanita</h3>
+        <p class="pdesc">Teknik Membuat Wanita Kewalahan</p>
+        <p class="pprice">Rp 99.000</p>
+        <a href="#" class="btn-buy-sm">Beli Sekarang</a>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="product-card">
+      <div class="product-img-wrap">
+        <img src="cover5.png" alt="200 Posisi Mesra Untuk Pasangan" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder" style="display:none; background:linear-gradient(135deg,#10050A,#0A1535);">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v13H4V4zm0 14h16v2H4v-2z"/></svg>
+          Cover 5
+        </div>
+        <span class="ebook-tag">Ebook</span>
+      </div>
+      <div class="product-body">
+        <h3>200 Posisi Mesra Untuk Pasangan</h3>
+        <p class="pdesc">Koleksi Inspirasi Keintiman untuk Menambah Kehangatan Hubungan</p>
+        <p class="pprice">Rp 178.000</p>
+        <a href="#" class="btn-buy-sm">Beli Sekarang</a>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="product-card">
+      <div class="product-img-wrap">
+        <img src="cover6.png" alt="Audio Brainwaves Premium" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder" style="display:none; background:linear-gradient(135deg,#0A1540,#200A30);">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v13H4V4zm0 14h16v2H4v-2z"/></svg>
+          Cover 6
+        </div>
+        <span class="ebook-tag">Audio</span>
+      </div>
+      <div class="product-body">
+        <h3>Audio Brainwaves Premium</h3>
+        <p class="pdesc">Attract Love & Sacred Body</p>
+        <p class="pprice">Rp 99.000</p>
+        <a href="#" class="btn-buy-sm">Beli Sekarang</a>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="product-card">
+      <div class="product-img-wrap">
+        <img src="cover7.png" alt="Rahasia Keintiman Saat Program Hamil" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder" style="display:none; background:linear-gradient(135deg,#10051A,#0A1535);">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v13H4V4zm0 14h16v2H4v-2z"/></svg>
+          Cover 7
+        </div>
+        <span class="ebook-tag">Ebook</span>
+      </div>
+      <div class="product-body">
+        <h3>Rahasia Keintiman Saat Program Hamil</h3>
+        <p class="pdesc">Panduan untuk calon ayah dan ibu</p>
+        <p class="pprice">Rp 99.000</p>
+        <a href="#" class="btn-buy-sm">Beli Sekarang</a>
+      </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="product-card">
+      <div class="product-img-wrap">
+        <img src="cover8.png" alt="The Queen's Influence" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder" style="display:none; background:linear-gradient(135deg,#0D0520,#1A1010);">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v13H4V4zm0 14h16v2H4v-2z"/></svg>
+          Cover 8
+        </div>
+        <span class="ebook-tag">Ebook</span>
+      </div>
+      <div class="product-body">
+        <h3>The Queen's Influence</h3>
+        <p class="pdesc">Kuasai diri dan daya tarik</p>
+        <p class="pprice">Rp 98.000</p>
+        <a href="#" class="btn-buy-sm">Beli Sekarang</a>
+      </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="product-card">
+      <div class="product-img-wrap">
+        <img src="cover9.png" alt="Resep Ramuan Herbal Vitalitas Pria" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder" style="display:none; background:linear-gradient(135deg,#0A1520,#15040E);">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v13H4V4zm0 14h16v2H4v-2z"/></svg>
+          Cover 9
+        </div>
+        <span class="ebook-tag">Ebook</span>
+      </div>
+      <div class="product-body">
+        <h3>Formula Herbal Vitalitas Pria</h3>
+        <p class="pdesc">Ramuan tradisional terbaik</p>
+        <p class="pprice">Rp 24.000</p>
+        <a href="#" class="btn-buy-sm">Beli Sekarang</a>
+      </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="product-card">
+      <div class="product-img-wrap">
+        <img src="cover10.png" alt="Tahan Lebih Lama Secara Alami" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder" style="display:none; background:linear-gradient(135deg,#0A1030,#180510);">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v13H4V4zm0 14h16v2H4v-2z"/></svg>
+          Cover 10
+        </div>
+        <span class="ebook-tag">Ebook</span>
+      </div>
+      <div class="product-body">
+        <h3>Tahan Lama &amp; Secara Alami</h3>
+        <p class="pdesc">Panduan Kebiasaan dan Latihan untuk Meningkatkan Performa Pria</p>
+        <p class="pprice">Rp 48.000</p>
+        <a href="#" class="btn-buy-sm">Beli Sekarang</a>
+      </div>
+    </div>
+
+    <!-- 11 -->
+    <div class="product-card">
+      <div class="product-img-wrap">
+        <img src="cover11.png" alt="26 Video Real Tanpa Sensor" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder" style="display:none; background:linear-gradient(135deg,#1A0810,#0A0D30);">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v13H4V4zm0 14h16v2H4v-2z"/></svg>
+          Cover 11
+        </div>
+        <span class="ebook-tag">Video</span>
+      </div>
+      <div class="product-body">
+        <h3>26 Video Real Tanpa Sensor</h3>
+        <p class="pdesc">Orgasmic Massage Techniques</p>
+        <p class="pprice">Rp 198.000</p>
+        <a href="#" class="btn-buy-sm">Beli Sekarang</a>
+      </div>
+    </div>
+
+  </div><!-- /product-grid -->
+
+  <div class="divider"></div>
+
+</div><!-- /container -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="#">Kebijakan Privasi</a>
+    <a href="#">Syarat &amp; Ketentuan</a>
+    <a href="#">Kebijakan Pengembalian</a>
+  </div>
+  <p class="copy">© 2026 Seni Hubungan. Hak cipta dilindungi.</p>
+  <p class="powered">Powered by <span>RICH CREATOR NUSANTARA</span></p>
+</footer>
+
+</body>
+</html>
